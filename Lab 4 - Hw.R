@@ -1,6 +1,7 @@
 ## Write the R code using ggplot function to recreate the graph from the Lecture 8 notes
 library(ggplot2)
 
+
 x1 = seq(-3, 3, by = 0.01)
 y1 = dnorm(x1)
 coord.x1 = c(qnorm(0.95), seq(qnorm(0.95), 3, by = 0.01), 3)
@@ -25,14 +26,14 @@ ggplot() + theme_classic() +
         axis.title.y = element_blank(),
         axis.text.x = element_text(size = 20),
         axis.ticks.length = unit(0.3, "cm"),
-        legend.position = c(0.123, 0.92),
+        legend.justification = c(0, 1),
+        legend.position = c(0, 1),
+        legend.direction = "vertical",
         legend.title = element_blank(),
         legend.background = element_rect(color = "black"),
         legend.text = element_text(size = 15)) +
   scale_x_continuous(breaks = c(0, 3), labels = c(expression(theta[0]), 
                                                   expression(theta[1])))
-  
-
 
 ## Implement a function that will check if a given positive integer is a prime number.
 
